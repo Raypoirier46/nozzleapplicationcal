@@ -12,19 +12,22 @@
         <br>
         <form method="GET">
             Amount from old nozzle:<input id='worn' placeholder="In gallons"></input><br>
+            <div id="size">
             Nozzle size:<select name="nozzle" value="select">
-                <option value="01">01 Orange</option>
-                <option value="015">015 Green</option>
-                <option value="02">02 Yellow</option>
-                <option value="025">025 Lilac</option>
-                <option value="03">03 Blue</option>
-                <option value="035">035 Brown Red</option>
-                <option value="04">04 Red</option>
-                <option value="05">05 Brown</option>
-                <option value="06">06 Gray</option>
-                <option value="08">08 White</option>
-                <option value="10">10 Light Blue</option>
+                <option value="01" id="01">01 Orange</option>
+                <option value="015" id="015">015 Green</option>
+                <option value="02" id="02">02 Yellow</option>
+                <option value="025" id="025">025 Lilac</option>
+                <option value="03" id="03">03 Blue</option>
+                <option value="035" id="035">035 Brown Red</option>
+                <option value="04" id="04">04 Red</option>
+                <option value="05" id="05">05 Brown</option>
+                <option value="06" id="06">06 Gray</option>
+                <option value="08" id="08">08 White</option>
+                <option value="10" id="10">10 Light Blue</option>
             </select>
+            </div>
+            The flow rate for new nozzle at 40 PSI is:<output id="result"></output>
         </form>
     <script src="main.js"></script>
 
