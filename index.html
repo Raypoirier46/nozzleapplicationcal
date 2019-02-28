@@ -10,11 +10,21 @@
     <p>Use the form to find out how much it costs to use worn out 
         nozzles and how long it'll take to pay for a new set</p>
         <br>
-        <form>
-            <input id='worn'>Amount from old nozzle</input><br>
-            <ul>
-                <select id=''></select>
-            </ul>
+        <form method="GET">
+            Amount from old nozzle:<input id='worn' placeholder="In gallons"></input><br>
+            Nozzle size:<select name="nozzle" value="select">
+                <option value="01">01 Orange</option>
+                <option value="015">015 Green</option>
+                <option value="02">02 Yellow</option>
+                <option value="025">025 Lilac</option>
+                <option value="03">03 Blue</option>
+                <option value="035">035 Brown Red</option>
+                <option value="04">04 Red</option>
+                <option value="05">05 Brown</option>
+                <option value="06">06 Gray</option>
+                <option value="08">08 White</option>
+                <option value="10">10 Light Blue</option>
+            </select>
         </form>
     <script src="main.js"></script>
 
