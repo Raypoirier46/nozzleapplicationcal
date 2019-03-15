@@ -1,6 +1,5 @@
-
-
-
+const form = document.forms['form'];
+const selectedSize = form.elements["size"];
 
 const size = {
     '01': 0.10,
@@ -16,13 +15,13 @@ const size = {
     '10': 1,
 }
 
+
+
 // const slectedSize = document.getElementById("size")
 
 function getFlow() {
     let flow = 0;
-    const form = document.forms['form'];
-    const selectedSize = form.elements["size"];
-    flow = size[selectedSize.value]
+    flow = size[selectedSize.value];
     return flow; 
 }
 
@@ -30,12 +29,24 @@ function getFlow() {
 function displayFlow () {
     let result = document.getElementById('result');
     let flow = getFlow();
-    result.innerHTML = flow
+    result.innerHTML = flow + "gal";
 }  
 
 
 
-// const overApply = overApply => { 
-//     document.getElementById('worn')/document.getElementById('result')
-//     return overApply
-// }
+function calOverApply() {
+    let flow = 0;
+    flow = size[selectedSize.value]; 
+    const worn = document.getElementById('worn').value;
+    const overApply = ((worn/flow)*100) - 100 + "%";
+    console.log(worn);
+    console.log(flow);
+    console.log(selectedSize);
+    return overApply;
+}
+
+function displayOverApply() {
+    let over = document.getElementById('over');
+    let display = calOverApply();
+    over.innerHTML = display;
+}

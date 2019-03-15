@@ -11,9 +11,10 @@
         nozzles and how long it'll take to pay for a new set</p>
         <br>
         <form method="GET" id='form'>
-            Amount from old nozzle:<input id='worn' placeholder="In gallons"></input><br>
+            Amount from old nozzle:<input type="text" id="worn" placeholder="In gallons" onchange='displayOverApply()'></input><br>
             <div id="size">
             Nozzle size:<select name="nozzle" id='size' onchange="displayFlow()">
+                <option value="00" id="00">Select a size</option>
                 <option value="01" id="01">01 Orange</option>
                 <option value="015" id="015">015 Green</option>
                 <option value="02" id="02">02 Yellow</option>
@@ -28,11 +29,11 @@
             </select>
             </div>
             <div>
-            The flow rate for new nozzle at 40 PSI is:
-            <div id="result"></div>gal
+            The flow rate for new nozzle at 40 PSI in 1 minute is:
+            <div id="result">___gal</div>
             </div>
-            <br>
-            You are over applying by: <output id='over'></output>
+            You are over applying by: 
+            <div id='over'>%</div>
         </form>
     <script src="./script.js"></script>
 
