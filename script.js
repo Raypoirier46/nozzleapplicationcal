@@ -38,10 +38,14 @@ function calOverApply() {
     let flow = 0;
     flow = size[selectedSize.value]; 
     const worn = document.getElementById('worn').value;
+<<<<<<< HEAD
     const overApply = ((worn/flow)*100) -100 + "%";
     console.log(worn);
     console.log(flow);
     console.log(selectedSize);
+=======
+    const overApply = ((worn/flow)*100) - 100 + "%";
+>>>>>>> 6f65365f40bae81a3db2339dddcbf846c190751e
     return overApply;
 }
 
