@@ -13,7 +13,7 @@
         <form method="GET" id='form'>
             Amount from old nozzle:<input type="text" id="worn" placeholder="In gallons" onchange='displayOverApply()'></input><br>
             <div id="size">
-            Nozzle size:<select name="nozzle" id='size' onchange="displayFlow()">
+            Nozzle size:<select name="nozzle" id='size' onchange="displayFlow(), displayOverApply()">
                 <option value="00" id="00">Select a size</option>
                 <option value="01" id="01">01 Orange</option>
                 <option value="015" id="015">015 Green</option>

@@ -38,7 +38,7 @@ function calOverApply() {
     let flow = 0;
     flow = size[selectedSize.value]; 
     const worn = document.getElementById('worn').value;
-    const overApply = ((worn/flow)*100) - 100 + "%";
+    const overApply = ((worn/flow)*100) -100 + "%";
     console.log(worn);
     console.log(flow);
     console.log(selectedSize);
